@@ -3,7 +3,9 @@ This is an example eclipse based blinky project for STM32F051 (ARM Cortex M0 con
 
 ### Installing Eclipse and GNU ARM Toolchain
 * Download Eclipse for C/C++ from here: https://eclipse.org/downloads/
-* Install the GNU ARM plugins as per the steps mentioned here: http://gnuarmeclipse.livius.net/blog/plugins-install/
+* Install the GNU ARM plugins as per the steps mentioned here [Note: Although the link does not mention, you need to install the Packs and Qemu plugins as well]: http://gnuarmeclipse.livius.net/blog/plugins-install/
+* Also install and configure the packs plugin as mentioned here: http://gnuarmeclipse.livius.net/blog/packs-manager/#The_Packs_perspective
+* Download QEMU binaries from here: http://sourceforge.net/projects/gnuarmeclipse/files/QEMU/GNU%20Linux/
 
 ### ARM GCC Toolchain install
 * Download the tar file form here: https://launchpad.net/gcc-arm-embedded/+download
