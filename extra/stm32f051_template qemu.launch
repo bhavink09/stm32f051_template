@@ -1,39 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<launchConfiguration type="ilg.gnuarmeclipse.debug.gdbjtag.openocd.launchConfigurationType">
-<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.PERIPHERALS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;peripherals&gt;&#10;&lt;peripheral name=&quot;GPIOC&quot;/&gt;&#10;&lt;/peripherals&gt;&#10;"/>
-<booleanAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.doContinue" value="true"/>
-<booleanAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.doDebugInRam" value="false"/>
-<booleanAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.doFirstReset" value="true"/>
-<booleanAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.doGdbServerAllocateConsole" value="true"/>
-<booleanAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.doGdbServerAllocateTelnetConsole" value="false"/>
-<booleanAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.doSecondReset" value="true"/>
-<booleanAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.doStartGdbServer" value="true"/>
-<booleanAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.enableSemihosting" value="true"/>
-<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.firstResetType" value="init"/>
-<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.gdbClientOtherCommands" value="set mem inaccessible-by-default off"/>
-<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.gdbClientOtherOptions" value=""/>
-<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.gdbServerConnectionAddress" value=""/>
-<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.gdbServerExecutable" value="${openocd_path}/${openocd_executable}"/>
-<intAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.gdbServerGdbPortNumber" value="3333"/>
-<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.gdbServerLog" value=""/>
-<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.gdbServerOther" value="-f ${openocd_path}/../scripts/board/stm32f0discovery.cfg"/>
-<intAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.gdbServerTelnetPortNumber" value="4444"/>
-<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.otherInitCommands" value=""/>
-<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.otherRunCommands" value=""/>
-<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.openocd.secondResetType" value="halt"/>
+<launchConfiguration type="ilg.gnuarmeclipse.debug.gdbjtag.qemu.launchConfigurationType">
+<stringAttribute key="bad_container_name" value="/stm32f051_template/e"/>
+<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.PERIPHERALS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;peripherals/&gt;&#10;"/>
+<booleanAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.qemu.doContinue" value="true"/>
+<booleanAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.qemu.doDebugInRam" value="true"/>
+<booleanAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.qemu.doFirstReset" value="true"/>
+<booleanAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.qemu.doGdbServerAllocateConsole" value="true"/>
+<booleanAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.qemu.doSecondReset" value="true"/>
+<booleanAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.qemu.doStartGdbServer" value="true"/>
+<booleanAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.qemu.enableSemihosting" value="true"/>
+<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.qemu.gdbClientOtherCommands" value="set mem inaccessible-by-default off"/>
+<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.qemu.gdbClientOtherOptions" value=""/>
+<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.qemu.gdbServerConnectionAddress" value=""/>
+<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.qemu.gdbServerExecutable" value="${qemu_path}/${qemu_executable}"/>
+<intAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.qemu.gdbServerGdbPortNumber" value="1234"/>
+<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.qemu.gdbServerMachineName" value="STM32F0-Discovery"/>
+<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.qemu.gdbServerOther" value=""/>
+<booleanAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.qemu.isGdbServerVerbose" value="true"/>
+<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.qemu.otherInitCommands" value=""/>
+<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.qemu.otherRunCommands" value=""/>
+<stringAttribute key="ilg.gnuarmeclipse.debug.gdbjtag.qemu.semihosting.cmdline" value="stm32f051_template.elf"/>
 <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.imageFileName" value=""/>
 <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.imageOffset" value=""/>
 <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.ipAddress" value="localhost"/>
-<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.jtagDevice" value="GNU ARM OpenOCD"/>
+<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.jtagDevice" value="GNU ARM QEMU"/>
 <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.loadImage" value="true"/>
 <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.loadSymbols" value="true"/>
 <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.pcRegister" value=""/>
-<intAttribute key="org.eclipse.cdt.debug.gdbjtag.core.portNumber" value="3333"/>
+<intAttribute key="org.eclipse.cdt.debug.gdbjtag.core.portNumber" value="1234"/>
 <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.setPcRegister" value="false"/>
 <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.setResume" value="false"/>
 <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.setStopAt" value="true"/>
 <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.stopAt" value="main"/>
-<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.symbolsFileName" value=""/>
+<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.symbolsFileName" value="${workspace_loc:/stm32f051_template/stm32f051_template.elf}"/>
 <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.symbolsOffset" value=""/>
 <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.useFileForImage" value="false"/>
 <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.useFileForSymbols" value="false"/>
