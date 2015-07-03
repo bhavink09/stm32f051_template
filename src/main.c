@@ -4,24 +4,10 @@
 
 volatile unsigned long timer_tick = 0;
 
-void check_key()
+void SysTick_Handler(void)
 {
-	unsigned long tmp = GPIOA->IDR;
-	if(tmp & 0x01)
-	{
-		GPIOC->BSRR = (1 << 9);
-	}
-	else
-	{
-		GPIOC->BRR = (1 << 9);
-	}
-}
-
-void SysTick_Handler(void) {
   if(timer_tick > 0)
 	  --timer_tick;
-
-  check_key();
 }
 
 void delay_ms(unsigned int time_ms)

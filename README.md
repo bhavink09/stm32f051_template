@@ -47,3 +47,11 @@ $ ln -s /usr/local/bin/openocd openocd
 $ echo "export OPENOCD_PATH=/home/bhavin/ARMUtils/openocd-bon/bin" >> .bashrc
 ```
 (For windows, download and install from here: http://sourceforge.net/projects/gnuarmeclipse/files/OpenOCD/Windows/)
+
+### Using QEMU to emulate code
+* The QEMU installed above is specially built for certain ARM boards. However, if you directly try to debug a normal app built for stm on qemu, you will get an error as below:
+``` sh7
+qemu: fatal: Trying to execute code outside RAM or ROM at 0x08000390
+```
+This is because for STM32F051, the qemu somehow thinks that the FLASH starts from 0x0 and RAM starts from 0x20000000. The RAM address is correct but the flash actually starts from 0x08000000. To solve this, you need to change the Flash address to 0x0 temporarily in the linker script and re-compile the code.
+* Note: Remember to change the address back to original before loading the code into actual chip.
