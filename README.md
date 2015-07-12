@@ -11,6 +11,7 @@ This is an example eclipse based blinky project for STM32F051 (ARM Cortex M0 con
 * Download the tar file form here: https://launchpad.net/gcc-arm-embedded/+download
 * Open the terminal and enter the following command:
 ``` sh1
+$ sudo apt-get install lib32z1 lib32ncurses5 lib32bz2-1.0
 $ mkdir ~/ARMTools
 $ cd ~/ARMTools
 ```
@@ -28,8 +29,9 @@ $ sudo ln -s /home/${USER}/ARMTools/gcc-arm-none-eabi-j_n-yyyyge-yyyymmdd-linux.
 * Extract the folder into /home/${USER}/ARMTools/
 * Build and install from src
 ``` sh4
+$ sudo apt-get install libusb-1.0-0-dev
 $ cd openocd-x.y.z
-$ ./configure
+$ ./configure --enable-maintainer-mode --enable-stlink --verbose
 $ make
 $ sudo make install
 ```
@@ -44,7 +46,7 @@ $ ln -s /usr/local/bin/openocd openocd
 ```
 * Add openocd_path variable to env.
 ``` sh6
-$ echo "export OPENOCD_PATH=/home/bhavin/ARMUtils/openocd-bon/bin" >> .bashrc
+$ echo "export OPENOCD_PATH=/home/bhavin/ARMUtils/openocd-bin/bin" >> ~/.bashrc
 ```
 (For windows, download and install from here: http://sourceforge.net/projects/gnuarmeclipse/files/OpenOCD/Windows/)
 
